@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace homework5
 {
-    internal class DecoratorNanobots : DecoratorElvenHouse//army of repairing nanobots
+    internal class DecoratorSpell2 : DecoratorElvenHouse//army of repairing nanobots
                                                          //- gain 50 health point after each attack
     {
-        public DecoratorNanobots(ElvenHouse _ElvenHouse) : base(_ElvenHouse)
+        public DecoratorSpell2(ElvenHouse _ElvenHouse) : base(_ElvenHouse)
         {
             Health = ElvenHouse.Health;
             Attack = ElvenHouse.Attack;

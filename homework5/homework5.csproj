@@ -46,7 +46,7 @@
     <Compile Include="DecoratorElvenHouse.cs" />
     <Compile Include="DecoratorSpell.cs" />
     <Compile Include="DecoratorArmor.cs" />
-    <Compile Include="DecoratorNanobots.cs" />
+    <Compile Include="DecoratorSpell2.cs" />
     <Compile Include="DecoratorMachineLearning.cs" />
     <Compile Include="DecoratorExtraAttack.cs" />
     <Compile Include="Program.cs" />

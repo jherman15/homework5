@@ -19,10 +19,10 @@ namespace homework5
             ElvenHouse s6 = new SpaceshipExtraCannon();
 
             s1 = new DecoratorArmor(s1);
-            s2 = new DecoratorNanobots(s2);
+            s2 = new DecoratorSpell2(s2);
             s3 = new DecoratorArmor(s3); 
             s4 = new DecoratorExtraAttack(s4);
-            s5 = new DecoratorNanobots(s5);
+            s5 = new DecoratorSpell2(s5);
             s6 = new DecoratorMachineLearning(s6);
             List<ElvenHouse> tournamentList = new List<ElvenHouse>() { s1, s2, s3, s4, s5, s6 };
             List<int> wins = new List<int>(new int[tournamentList.Count]);
