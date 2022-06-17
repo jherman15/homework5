@@ -52,7 +52,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RunBattle.cs" />
-    <Compile Include="Spaceship.cs" />
+    <Compile Include="ElvenHouse.cs" />
     <Compile Include="SpaceshipArmor.cs" />
     <Compile Include="SpaceshipExtraCannon.cs" />
     <Compile Include="SpaceshipLaser.cs" />
