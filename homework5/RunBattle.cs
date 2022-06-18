@@ -40,20 +40,20 @@ namespace homework5
 
 
             // prepare spaceships
-            ElvenHouse s1 = new Noldor();
+            //ElvenHouse noldor = new Noldor();
             ElvenHouse s2 = new Vanyar();
             ElvenHouse s3 = new Vanyar();
             ElvenHouse s4 = new Teleri();
             ElvenHouse s5 = new SpaceshipNanobots();
             ElvenHouse s6 = new SpaceshipExtraCannon();
 
-            noldor = new DecoratorArmor(s1);
+            noldor = new DecoratorArmor(noldor);
             s2 = new DecoratorSpell2(s2);
             s3 = new DecoratorArmor(s3); 
             s4 = new DecoratorExtraAttack(s4);
             s5 = new DecoratorSpell2(s5);
             s6 = new DecoratorMachineLearning(s6);
-            List<ElvenHouse> tournamentList = new List<ElvenHouse>() { s1, s2, s3, s4, s5, s6 };
+            List<ElvenHouse> tournamentList = new List<ElvenHouse>() { noldor, s2, s3, s4, s5, s6 };
             List<int> wins = new List<int>(new int[tournamentList.Count]);
 
             // run tournament
