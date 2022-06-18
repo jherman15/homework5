@@ -34,11 +34,11 @@ namespace homework5
 
             Console.WriteLine
                 ("This is a LoTR game, where you are able to create your own houses. \n" +
-                "What first house you want to create? \n " +
-                "You can only create the total number of 5 troops" +
+                "What first house you want to create? \n" +
+                "You can only create the total number of 5 troops \n " +
                 "a) Noldor \n " +
                 "b) Teleri \n " +
-                "c) Vanyar \n\n " +
+                "c) Vanyar \n\n" +
                 "Your answer: ");
 
             string house = Console.ReadLine();
@@ -49,7 +49,6 @@ namespace homework5
             else if (house == "Teleri")
             {
                 teleri = HouseCreationEngine.CreateTeleri();
-
             }
             else if (house == "Vanyar")
             {
@@ -59,19 +58,21 @@ namespace homework5
 
             // prepare spaceships
             //ElvenHouse noldor = new Noldor();
-            ElvenHouse s2 = new Vanyar();
-            ElvenHouse s3 = new Vanyar();
-            ElvenHouse s4 = new Teleri();
-            ElvenHouse s5 = new SpaceshipNanobots();
-            ElvenHouse s6 = new SpaceshipExtraCannon();
+            //ElvenHouse s2 = new Vanyar();
+            //ElvenHouse s3 = new Vanyar();
+            //ElvenHouse s4 = new Teleri();
+            //ElvenHouse s5 = new SpaceshipNanobots();
+            //ElvenHouse s6 = new SpaceshipExtraCannon();
 
             noldor = new DecoratorArmor(noldor);
-            s2 = new DecoratorSpell2(s2);
-            s3 = new DecoratorArmor(s3); 
-            s4 = new DecoratorExtraAttack(s4);
-            s5 = new DecoratorSpell2(s5);
-            s6 = new DecoratorMachineLearning(s6);
-            List<ElvenHouse> tournamentList = new List<ElvenHouse>() { noldor, s2, s3, s4, s5, s6 };
+            teleri = new DecoratorArmor(teleri);
+            vanyar = new DecoratorArmor(vanyar);
+            //s2 = new DecoratorSpell2(s2);
+            //s3 = new DecoratorArmor(s3); 
+            //s4 = new DecoratorExtraAttack(s4);
+            //s5 = new DecoratorSpell2(s5);
+            //s6 = new DecoratorMachineLearning(s6);
+            List<ElvenHouse> tournamentList = new List<ElvenHouse>() { noldor, teleri, vanyar };
             List<int> wins = new List<int>(new int[tournamentList.Count]);
 
             // run tournament

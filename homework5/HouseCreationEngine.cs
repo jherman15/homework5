@@ -41,10 +41,11 @@ namespace homework5
                         break;
                     }
 
-                case "Defence":
+                case "Spell":
                     {
-                        x = new DecoratorArmor(x);
-                        Console.WriteLine($"Added {choice}.");
+                        Console.WriteLine("Attack before: " + x.Attack);
+                        x = new DecoratorSpell(x);
+                        Console.WriteLine("Attack after: " + x.Attack);
                         break;
                     }
 
