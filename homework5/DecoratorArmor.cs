@@ -11,16 +11,11 @@ namespace homework5
         public DecoratorArmor(ElvenHouse _ElvenHouse) : base(_ElvenHouse)
         {
             Health = ElvenHouse.Health + 150;
-            Attack = ElvenHouse.Attack;
+            //Attack = ElvenHouse.Attack;
         }
 
     public override int GetNextAttack()//ship's basic attack 
         {
-            //if (ElvenHouse.GetType() == typeof(SpaceshipNanobots))
-            //{
-            //    Health += 50;
-            //    return ElvenHouse.GetNextAttack();
-            //}
             return base.GetNextAttack();
         }
 
