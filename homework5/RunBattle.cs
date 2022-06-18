@@ -8,8 +8,37 @@ namespace homework5
 {
     class RunBattle
     {
+
         public static void Run()
         {
+
+            ElvenHouse noldor, teleri, vanyar;
+
+            Console.WriteLine
+                ("This is a LoTR game, where you are able to create your own houses. \n" +
+                "What first house you want to create? \n " +
+                "You can only create the total number of 5 troops" +
+                "a) Noldor \n " +
+                "b) Teleri \n " +
+                "c) Vanyar \n\n " +
+                "Your answer: ");
+
+            string house = Console.ReadLine();
+            if (house == "Noldor")
+            {
+                noldor = HouseCreationEngine.CreateNoldor();
+            }
+            else if (house == "Teleri")
+            {
+                teleri = HouseCreationEngine.CreateTeleri();
+
+            }
+            else if (house == "Vanyar")
+            {
+                vanyar = HouseCreationEngine.CreateVanyar();
+            }
+
+
             // prepare spaceships
             ElvenHouse s1 = new Noldor();
             ElvenHouse s2 = new Vanyar();
@@ -18,7 +47,7 @@ namespace homework5
             ElvenHouse s5 = new SpaceshipNanobots();
             ElvenHouse s6 = new SpaceshipExtraCannon();
 
-            s1 = new DecoratorArmor(s1);
+            noldor = new DecoratorArmor(s1);
             s2 = new DecoratorSpell2(s2);
             s3 = new DecoratorArmor(s3); 
             s4 = new DecoratorExtraAttack(s4);

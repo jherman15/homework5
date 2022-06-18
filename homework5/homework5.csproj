@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HouseCreationEngine.cs" />
     <Compile Include="DecoratorElvenHouse.cs" />
     <Compile Include="DecoratorSpell.cs" />
     <Compile Include="DecoratorArmor.cs" />
@@ -53,10 +54,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RunBattle.cs" />
     <Compile Include="ElvenHouse.cs" />
-    <Compile Include="SpaceshipArmor.cs" />
+    <Compile Include="Vanyar.cs" />
     <Compile Include="SpaceshipExtraCannon.cs" />
-    <Compile Include="SpaceshipLaser.cs" />
-    <Compile Include="SpaceshipMachineLearning.cs" />
+    <Compile Include="Noldor.cs" />
+    <Compile Include="Teleri.cs" />
     <Compile Include="SpaceshipNanobots.cs" />
   </ItemGroup>
   <ItemGroup>
