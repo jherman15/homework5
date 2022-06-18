@@ -9,10 +9,28 @@ namespace homework5
     class RunBattle
     {
 
+        static ElvenHouse noldor, teleri, vanyar;
+        public ElvenHouse Noldor                //inicjalizacja
+        {
+            get { return noldor; }
+            set { noldor = value; }
+        }
+
+        public ElvenHouse Teleri                //inicjalizacja
+        {
+            get { return teleri; }
+            set { noldor = value; }
+        }
+
+        public ElvenHouse Vanyar               //inicjalizacja
+        {
+            get { return vanyar; }
+            set { vanyar = value; }
+        }
         public static void Run()
         {
 
-            ElvenHouse noldor, teleri, vanyar;
+            
 
             Console.WriteLine
                 ("This is a LoTR game, where you are able to create your own houses. \n" +
