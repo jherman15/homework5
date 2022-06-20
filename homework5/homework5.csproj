@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Story.cs" />
+    <Compile Include="IBeing.cs" />
+    <Compile Include="Morgoth.cs" />
+    <Compile Include="Ainur.cs" />
     <Compile Include="HouseCreationEngine.cs" />
     <Compile Include="DecoratorElvenHouse.cs" />
     <Compile Include="DecoratorSpell.cs" />

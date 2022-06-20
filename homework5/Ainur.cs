@@ -6,17 +6,26 @@ using System.Threading.Tasks;
 
 namespace homework5
 {
-    public abstract class ElvenHouse:IBeing
+    public abstract class Ainur:IBeing
     {
-        public virtual int Attack { get; set; } = 100;
-        public virtual int Health { get; set; } = 300;
+        public virtual int Attack { get; set; } = 1000;
+        public virtual int Health { get; set; } = 3000;
         public virtual int GetNextAttack()
         {
             return Attack;
         }
         public virtual string Type()
         {
-            return "ElvenHouse";
+            return "Morgoth";
         }
     }
+
+
+
+
+
+
+
+
+
 }

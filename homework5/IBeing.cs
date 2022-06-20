@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace homework5
 {
-    internal class Program
+    internal interface IBeing
     {
-        static void Main(string[] args)
-        {
-            RunBattle.CreateHouse();
-            Console.ReadKey();
-        }
+        int Attack { get; set; }
+        int Health { get; set; }
     }
 }
