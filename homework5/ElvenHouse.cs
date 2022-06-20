@@ -34,6 +34,11 @@ namespace homework5
                 DoubleSlash(target);
                 Console.WriteLine("You used double slash!");
             }
+            else if (decision==2)
+            {
+                Console.WriteLine("Game over");
+                Environment.Exit(0);
+            }
 
         }
 
@@ -53,8 +58,8 @@ namespace homework5
             {
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine("1. Attack");
-                Console.WriteLine("2. Heal");
-                Console.WriteLine("3. Special");
+                Console.WriteLine("2. Heal //for now end the game (to implement)");
+                Console.WriteLine("3. Special //to implement");
 
                 bool test = int.TryParse(Console.ReadLine(), out choice);
                 if (!test || choice > 3 || choice <= 0)
@@ -64,6 +69,7 @@ namespace homework5
                     Console.Clear();
                     continue;
                 }
+
 
                 if (choice == 3) // Specials menu
                 {

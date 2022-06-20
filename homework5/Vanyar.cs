@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace homework5
 {
-    public class Vanyar : ElvenHouse
+    public class Vanyar : ElvenHouse            // heal ability
     {
 
-        public int healLvl = 7, maxHealth = 200;
+        public int healLvl = 50, maxHealth = 200;
 
-        // spaceship with additional armor - more health points
         public Vanyar() : base()
         {
             Health += 150;
@@ -29,7 +28,7 @@ namespace homework5
 
         public override string Type()
         {
-            return "vanyar";
+            return "Vanyar";
         }
 
     }

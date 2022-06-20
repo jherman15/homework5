@@ -23,5 +23,10 @@ namespace homework5
             return null;
         }
 
+        //public virtual void YourTurn(int decision, Being target)
+        //{
+     
+        //}
+
     }
 }

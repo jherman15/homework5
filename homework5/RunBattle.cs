@@ -67,8 +67,7 @@ namespace homework5
                         {
                             Console.WriteLine("Health before: " + x.Health);
                             x = new DecoratorArmor(x);
-                            Console.WriteLine("Health after: " + x.Health);
-                            Console.WriteLine("Noldor has been armed: " + x.Health);
+                            Console.WriteLine("Noldor has been armed! Current health: " + x.Health);
                             break;
                         }
 
@@ -107,17 +106,21 @@ namespace homework5
             }
 
             Story.AfterCreating();
-            Console.WriteLine("Morgoth health: " + morgoth.Health);
+            Console.WriteLine("Morgoth base health: " + morgoth.Health + "\n");
 
             for (int i = 0; i < battleList.Count; i++)
             {
-                morgoth.Health -= (battleList[i]).GetNextAttack();            //lepiej na targety to przerobic
-                Console.WriteLine("Morgoth health after " + battleList[i] +  " attack: " + morgoth.Health);
+                morgoth.Health -= (battleList[i]).GetNextAttack();
+
+                Console.WriteLine("Morgoth health after " + battleList[i].Type() +  " attack: " + morgoth.Health + "\n");
+
                 morgoth.FireBreath(battleList[i]);
-                Console.WriteLine("Elven health after Morgoth attack: " + battleList[i].Health);
-                Console.WriteLine("Morgoth used a fire breath!");
+
+                
+                Console.WriteLine(battleList[i].Type() + " has been atttacked with fire breath!\n" + "Elven health after Morgoth attack: " + battleList[i].Health
+                    + "\n\nNow it's your turn!");
                 battleList[i].YourTurn(battleList[i].AttackChoice(), morgoth);
-                IsHeroDead(battleList[i]);
+                //IsHeroDead(battleList[i]);
 
             }
 

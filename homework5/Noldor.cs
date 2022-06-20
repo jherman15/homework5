@@ -20,7 +20,7 @@ namespace homework5
         }
         public override string Type()
         {
-            return "spaceship-laser";
+            return "Noldor";
         }
 
 
