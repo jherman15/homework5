@@ -8,6 +8,20 @@ namespace homework5
 {
     public abstract class Being
     {
+        public virtual int Attack { get; set; } = 0;
+        public virtual int Health { get; set; } = 0;
+        public virtual string Name { get; set; } = null;
+
+
+        public virtual int GetNextAttack()
+        {
+            return Attack;
+        }
+
+        public virtual string Type()
+        {
+            return null;
+        }
 
     }
 }

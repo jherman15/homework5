@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Being.cs" />
+    <Compile Include="DecoratorAinur.cs" />
+    <Compile Include="DecoratorFireBolt.cs" />
     <Compile Include="Story.cs" />
     <Compile Include="IBeing.cs" />
     <Compile Include="Morgoth.cs" />

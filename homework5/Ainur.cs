@@ -6,27 +6,24 @@ using System.Threading.Tasks;
 
 namespace homework5
 {
-    public abstract class Ainur:Being
+    public abstract class Ainur : Being
     {
-        public virtual int Attack { get; set; } = 1000;
-        public virtual int Health { get; set; } = 3000;
-        public virtual string Name { get; set; } = null;
-        public virtual int GetNextAttack()
+        public override int Attack { get; set; } = 100;
+        public override int Health { get; set; } = 1000;
+        public override string Name { get; set; } = "Ainur";
+
+
+        public override int GetNextAttack()
         {
             return Attack;
         }
-        public virtual string Type()
+
+        public override string Type()
         {
-            return "Morgoth";
+            return "Ainur";
         }
+
+
     }
-
-
-
-
-
-
-
-
-
 }
+

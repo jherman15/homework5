@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace homework5
 {
-    internal class DecoratorMachineLearning : DecoratorElvenHouse//machine learning callibration -
-                                                                //becomes stronger with every attack
+    internal class DecoratorMachineLearning : DecoratorElvenHouse
+
     {
         public DecoratorMachineLearning(ElvenHouse _ElvenHouse) : base(_ElvenHouse)
         {
@@ -15,7 +15,7 @@ namespace homework5
             Attack = ElvenHouse.Attack;
         }
        
-        public override int GetNextAttack()//becomes stronger with every attack
+        public override int GetNextAttack()     //becomes stronger with every attack
         {
             if (ElvenHouse.GetType() == typeof(SpaceshipNanobots))
             {
@@ -23,6 +23,7 @@ namespace homework5
                 Health += 50;
                 return ElvenHouse.GetNextAttack();
             }
+
             ElvenHouse.Attack = 25 + base.Attack;//+25 to attack after each attack
             return base.GetNextAttack();
         }

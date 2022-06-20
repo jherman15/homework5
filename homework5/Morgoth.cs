@@ -47,7 +47,7 @@ namespace homework5
         {
             if (choice == 1)
             {
-                //BasicAttack(target);
+                //GetNextAttack(target);
                 Console.WriteLine("Dragon sneezed on you!");
             }
 

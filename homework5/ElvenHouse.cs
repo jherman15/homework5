@@ -8,14 +8,16 @@ namespace homework5
 {
     public abstract class ElvenHouse:Being
     {
-        public virtual int Attack { get; set; } = 100;
-        public virtual int Health { get; set; } = 300;
-        public virtual string Name { get; set; } = null;
-        public virtual int GetNextAttack()
+        public override int Attack { get; set; } = 10;
+        public override int Health { get; set; } = 100;
+        public override string Name { get; set; } = "Elves";
+
+        public override int GetNextAttack()
         {
             return Attack;
         }
-        public virtual string Type()
+
+        public override string Type()
         {
             return "ElvenHouse";
         }
