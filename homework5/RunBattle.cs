@@ -68,6 +68,7 @@ namespace homework5
                             Console.WriteLine("Health before: " + x.Health);
                             x = new DecoratorArmor(x);
                             Console.WriteLine("Health after: " + x.Health);
+                            Console.WriteLine("Noldor has been armed: " + x.Health);
                             break;
                         }
 
@@ -93,6 +94,18 @@ namespace homework5
                 }
             }
 
+            void IsHeroDead(ElvenHouse hero)
+            {
+                if (hero.Health <= 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Looks like you are dead!");
+                    Console.WriteLine("Better luck next time!");
+                    Console.ReadLine();
+                    Environment.Exit(0);
+                }
+            }
+
             Story.AfterCreating();
             Console.WriteLine("Morgoth health: " + morgoth.Health);
 
@@ -100,7 +113,15 @@ namespace homework5
             {
                 morgoth.Health -= battleList[i].GetNextAttack();
                 Console.WriteLine("Morgoth health after " + battleList[i] +  " attack: " + morgoth.Health);
+                morgoth.FireBreath(battleList[i]);
+                Console.WriteLine("Elven health after Morgoth attack: " + battleList[i].Health);
+                Console.WriteLine("Morgoth used a fire breath!");
+                battleList[i].YourTurn(battleList[i].Choice(), morgoth);
+                IsHeroDead(battleList[i]);
+
             }
+
+            
 
         }
 

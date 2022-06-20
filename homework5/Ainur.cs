@@ -10,6 +10,7 @@ namespace homework5
     {
         public virtual int Attack { get; set; } = 1000;
         public virtual int Health { get; set; } = 3000;
+        public virtual string Name { get; set; } = null;
         public virtual int GetNextAttack()
         {
             return Attack;

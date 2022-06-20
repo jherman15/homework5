@@ -23,15 +23,31 @@ namespace homework5
             return "spaceship-laser";
         }
 
-        public void DoubleSlash(Ainur target)
-        {
-            target.Health -= Attack * 2;
-        }
+
 
         public void SpinAttack(Ainur target)
         {
             target.Health -= ((Attack - 2) * 3);
         }
+
+        public override void YourTurn(int decision, Ainur target)
+        {
+            if (decision == 1)                                                      //a moze nie musze tego juz pisac skoro mialem wczesniej?
+            {
+                DoubleSlash(target);
+                Console.WriteLine("You used double slash!");
+            }
+
+            if (decision == 2)
+            {
+                SpinAttack(target);
+                Console.WriteLine("You used spin attack!");
+            }
+
+        }
+
+       
+
 
     }
 }

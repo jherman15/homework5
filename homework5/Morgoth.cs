@@ -12,8 +12,9 @@ namespace homework5
 
         public Morgoth() : base()
         {
-            Attack += 500;
+            Attack += 100;
             Health += 200;
+            Name += "Morgoth";
         }
 
         //public int armor;

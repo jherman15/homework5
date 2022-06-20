@@ -10,5 +10,8 @@ namespace homework5
     {
         int Attack { get; set; }
         int Health { get; set; }
+        string Name { get; set; }
+
+
     }
 }

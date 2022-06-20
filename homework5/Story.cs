@@ -15,10 +15,10 @@ namespace homework5
             Console.WriteLine
         ("This is a LoTR game, where you are able to create your own houses. \n" +
         "What first house you want to create? \n " +
-        "You can only create the total number of 5 troops" +
+        "You can only create the total number of 5 troops. \n " +
         "a) Noldor \n " +
         "b) Teleri \n " +
-        "c) Vanyar \n\n " +
+        "c) Vanyar \n\n" +
         "Your answer: ");
         }
 
