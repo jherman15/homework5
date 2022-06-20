@@ -8,7 +8,7 @@ namespace homework5
 {
     public abstract class Ainur : Being
     {
-        public override int Attack { get; set; } = 100;
+        public override int Attack { get; set; } = 10;
         public override int Health { get; set; } = 1000;
         public override string Name { get; set; } = "Ainur";
 

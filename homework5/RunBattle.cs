@@ -97,8 +97,8 @@ namespace homework5
             {
                 if (hero.Health <= 0)
                 {
-                    Console.Clear();
-                    Console.WriteLine("Looks like you are dead!");
+                    //Console.Clear();
+                    Console.WriteLine("Looks like " + hero + " are dead!");
                     Console.WriteLine("Better luck next time!");
                     Console.ReadLine();
                     Environment.Exit(0);
@@ -114,13 +114,23 @@ namespace homework5
 
                 Console.WriteLine("Morgoth health after " + battleList[i].Type() +  " attack: " + morgoth.Health + "\n");
 
-                morgoth.FireBreath(battleList[i]);
+                if (battleList[i].Type()=="Noldor")
+                {
+                    Console.WriteLine("Morgoth hates Noldor as they are trying to surpass him." +
+                        "\n\nFIREEEEE BREAAAAAAAATHH!!! DIE NOLDORS!");
+                    morgoth.FireBreath(battleList[i]);
+                    Console.WriteLine("Noldor health after Morgoth attack: " + battleList[i].Health);
+                }
 
-                
-                Console.WriteLine(battleList[i].Type() + " has been atttacked with fire breath!\n" + "Elven health after Morgoth attack: " + battleList[i].Health
-                    + "\n\nNow it's your turn!");
+                IsHeroDead(battleList[i]);
+
+
+                //Console.WriteLine(battleList[i].Type() + " has been attacked with fire breath!\n" + "Elven health after Morgoth attack: " + battleList[i].Health);
+                Console.WriteLine("\n\nNow it's your turn again!");
+
                 battleList[i].YourTurn(battleList[i].AttackChoice(), morgoth);
-                //IsHeroDead(battleList[i]);
+                
+               
 
             }
 

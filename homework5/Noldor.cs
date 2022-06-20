@@ -17,6 +17,8 @@ namespace homework5
         public Noldor() : base()
         {
             Attack += 50;
+            Health += 1000;
+
         }
         public override string Type()
         {
