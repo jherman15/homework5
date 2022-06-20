@@ -33,44 +33,44 @@ namespace homework5
             target.Health -= Attack * 2;
         }
 
-        //public void Claw(Hero target)
-        //{
-        //    target.health -= attack + 3;
-        //}
+        public void Claw(ElvenHouse target)
+        {
+            target.Health -= Attack + 3;
+        }
 
-        //public void Bite(Hero target)
-        //{
-        //    target.health -= attack + 4;
-        //}
+        public void Bite(ElvenHouse target)
+        {
+            target.Health -= Attack + 4;
+        }
 
-        //public void DragonTurn(int choice, Hero target)
-        //{
-        //    if (choice == 1)
-        //    {
-        //        NormAttack(target);
-        //        Console.WriteLine("Dragon sneezed on you!");
-        //    }
+        public void DragonTurn(int choice, ElvenHouse target)
+        {
+            if (choice == 1)
+            {
+                //BasicAttack(target);
+                Console.WriteLine("Dragon sneezed on you!");
+            }
 
-        //    if (choice == 2)
-        //    {
-        //        FireBreath(target);
-        //        Console.WriteLine("Dragon used flamethrower on you!");
-        //    }
+            if (choice == 2)
+            {
+                FireBreath(target);
+                Console.WriteLine("Dragon used flamethrower on you!");
+            }
 
-        //    if (choice == 3)
-        //    {
-        //        Claw(target);
-        //        Console.WriteLine("Dragon clawed you!");
-        //    }
+            if (choice == 3)
+            {
+                Claw(target);
+                Console.WriteLine("Dragon clawed you!");
+            }
 
-        //    if (choice == 4)
-        //    {
-        //        Bite(target);
-        //        Console.WriteLine("Dragon bite you!");
-        //    }
+            if (choice == 4)
+            {
+                Bite(target);
+                Console.WriteLine("Dragon bite you!");
+            }
 
-        //    Console.ReadLine();
-        //    Console.Clear();
-        //}
+            Console.ReadLine();
+            Console.Clear();
+        }
     }
 }

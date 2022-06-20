@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace homework5
 {
-    public abstract class ElvenHouse:IBeing
+    public abstract class ElvenHouse:Being
     {
         public virtual int Attack { get; set; } = 100;
         public virtual int Health { get; set; } = 300;
@@ -43,7 +43,7 @@ namespace homework5
             Console.WriteLine("Health value is: {0}", elvenHouse.Health);
         }
 
-        public virtual int Choice() // Produces heros decision
+        public virtual int AttackChoice() // Produces heros decision
         {
             bool correctInput = true;
             int choice = 0, choice2;

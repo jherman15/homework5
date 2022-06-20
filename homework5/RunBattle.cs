@@ -37,7 +37,7 @@ namespace homework5
             ElvenHouse CreateNoldor()
             {
                 ElvenHouse noldorHouse = new Noldor();
-                choosing(noldorHouse);
+                DecoratorChoice(noldorHouse);
                 battleList.Add(noldorHouse);
                 return noldorHouse;
             }
@@ -45,7 +45,7 @@ namespace homework5
              ElvenHouse CreateTeleri()
             {
                 ElvenHouse teleriHouse = new Teleri();
-                choosing(teleriHouse);
+                DecoratorChoice(teleriHouse);
                 battleList.Add(teleriHouse);
                 return teleriHouse;
             }
@@ -53,12 +53,12 @@ namespace homework5
              ElvenHouse CreateVanyar()
             {
                 ElvenHouse vanyarHouse = new Vanyar();
-                choosing(vanyarHouse);
+                DecoratorChoice(vanyarHouse);
                 battleList.Add(vanyarHouse);
                 return vanyarHouse;
             }
 
-             void choosing(ElvenHouse x)
+             void DecoratorChoice(ElvenHouse x)
             {
                 string choice = Console.ReadLine();
                 switch (choice)
@@ -111,12 +111,12 @@ namespace homework5
 
             for (int i = 0; i < battleList.Count; i++)
             {
-                morgoth.Health -= battleList[i].GetNextAttack();
+                morgoth.Health -= (battleList[i]).GetNextAttack();            //lepiej na targety to przerobic
                 Console.WriteLine("Morgoth health after " + battleList[i] +  " attack: " + morgoth.Health);
                 morgoth.FireBreath(battleList[i]);
                 Console.WriteLine("Elven health after Morgoth attack: " + battleList[i].Health);
                 Console.WriteLine("Morgoth used a fire breath!");
-                battleList[i].YourTurn(battleList[i].Choice(), morgoth);
+                battleList[i].YourTurn(battleList[i].AttackChoice(), morgoth);
                 IsHeroDead(battleList[i]);
 
             }

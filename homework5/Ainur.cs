@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace homework5
 {
-    public abstract class Ainur:IBeing
+    public abstract class Ainur:Being
     {
         public virtual int Attack { get; set; } = 1000;
         public virtual int Health { get; set; } = 3000;
