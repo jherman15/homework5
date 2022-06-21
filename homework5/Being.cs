@@ -25,8 +25,16 @@ namespace homework5
 
         //public virtual void YourTurn(int decision, Being target)
         //{
-     
+
         //}
+
+        public virtual void PrintStats(Being being)
+        {
+            Console.WriteLine("{0} stats:", being.Name);
+            Console.WriteLine("");
+            Console.WriteLine("Attack value is: {0}", being.Attack);
+            Console.WriteLine("Health value is: {0}", being.Health);
+        }
 
     }
 }

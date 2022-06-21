@@ -17,7 +17,7 @@ namespace homework5
 
         public override int GetNextAttack()//gain 50 health point after each attack
         {
-            if (ElvenHouse.GetType() == typeof(SpaceshipNanobots))
+            if (ElvenHouse.GetType() == typeof(DecoratorHealingAttack))
             {
 
                 Health = 100 + base.Health;

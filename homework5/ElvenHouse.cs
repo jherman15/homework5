@@ -42,13 +42,7 @@ namespace homework5
 
         }
 
-        public void PrintStats(ElvenHouse elvenHouse)
-        {
-            Console.WriteLine("{0} stats:", elvenHouse.Name);
-            Console.WriteLine("");
-            Console.WriteLine("Attack value is: {0}", elvenHouse.Attack);
-            Console.WriteLine("Health value is: {0}", elvenHouse.Health);
-        }
+
 
         public virtual int AttackChoice() // Produces heros decision
         {

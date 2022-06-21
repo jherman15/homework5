@@ -65,7 +65,7 @@
     <Compile Include="SpaceshipExtraCannon.cs" />
     <Compile Include="Noldor.cs" />
     <Compile Include="Teleri.cs" />
-    <Compile Include="SpaceshipNanobots.cs" />
+    <Compile Include="DecoratorHealingAttack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -34,7 +34,7 @@ namespace homework5
 
         public override void YourTurn(int decision, Ainur target)
         {
-            if (decision == 1)                                                      //a moze nie musze tego juz pisac skoro mialem wczesniej?
+            if (decision == 1)
             {
                 DoubleSlash(target);
                 Console.WriteLine("You used double slash!");

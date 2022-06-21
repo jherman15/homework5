@@ -17,7 +17,7 @@ namespace homework5
        
         public override int GetNextAttack()     //becomes stronger with every attack
         {
-            if (ElvenHouse.GetType() == typeof(SpaceshipNanobots))
+            if (ElvenHouse.GetType() == typeof(DecoratorHealingAttack))
             {
                 ElvenHouse.Attack = 25 + base.Attack;
                 Health += 50;

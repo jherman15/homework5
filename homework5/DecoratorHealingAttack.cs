@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace homework5
 {
-    public class SpaceshipNanobots : ElvenHouse
+    public class DecoratorHealingAttack : ElvenHouse            //gain health after attack
     {
-        // spaceship with an army of repairing nanobots - gain 50 health point after each attack
         public override int GetNextAttack()
         {
             Health += 50;
