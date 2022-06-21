@@ -12,7 +12,8 @@ namespace homework5
         public override int GetNextAttack()
         {
             Attack += 25;
-            return base.GetNextAttack();
+            //return base.GetNextAttack();              ?? czy to nie zwroci od klasy bazowej?
+            return Attack;
         }
         public override string Type()
         {

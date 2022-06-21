@@ -16,6 +16,14 @@ namespace homework5
             Health += 150;
         }
 
+        public override int GetNextAttack()
+        {
+            Random random = new Random();
+            if (random.Next(10) < 7) return Attack;
+            else
+                return Attack * 2;
+        }
+
         public void Heal()
         {
             Health += healLvl;

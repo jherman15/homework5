@@ -165,7 +165,8 @@ namespace homework5
                     {
                         Console.WriteLine("Morgoth hates Noldor as they are trying to surpass him." +
                             "\n\nFIREEEEE BREAAAAAAAATHH!!! DIE NOLDORS!");
-                        morgoth.FireBreath(battleList[i]);
+                        //morgoth.GetNextAttack(battleList[i]);
+                        battleList[i].Health -= morgoth.GetNextAttack();
                         Console.WriteLine("Noldor health after Morgoth attack: " + battleList[i].Health);
                     }
                     else
