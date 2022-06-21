@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace homework5
 {
-    internal class DecoratorArmor : DecoratorElvenHouse                         //additional armor - more health points
+    internal class DecoratorCraft : DecoratorElvenHouse                         //increasing craft (which can judge the battle's result)
     {
-        public DecoratorArmor(ElvenHouse _ElvenHouse) : base(_ElvenHouse)
+        public DecoratorCraft(ElvenHouse _ElvenHouse) : base(_ElvenHouse)
         {
-            Health = ElvenHouse.Health + 150;
+            Health = ElvenHouse.Health;
             Attack = ElvenHouse.Attack;
+            Craft = ElvenHouse.Craft += 75;
         }
 
         public override int GetNextAttack()     //basic attack 
         {
             return base.GetNextAttack();
         }
-        
+
     }
 }

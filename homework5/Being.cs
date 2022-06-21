@@ -34,6 +34,7 @@ namespace homework5
             Console.WriteLine("");
             Console.WriteLine("Attack value is: {0}", being.Attack);
             Console.WriteLine("Health value is: {0}", being.Health);
+
         }
 
     }

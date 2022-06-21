@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace homework5
 {
-    internal class DecoratorExtraAttack : DecoratorElvenHouse       //extra attack - 30% (???) chance for another attack
+    internal class DecoratorExtraAttack : DecoratorElvenHouse       //extra attack
     {
         public DecoratorExtraAttack(ElvenHouse _ElvenHouse) : base(_ElvenHouse)
         {
@@ -14,9 +14,9 @@ namespace homework5
             Attack = ElvenHouse.Attack;          
         }
 
-        public override int GetNextAttack() //extra attack
+        public override int GetNextAttack()
         {
-            return base.GetNextAttack() + ElvenHouse.GetNextAttack();   //basic + extra attack
+            return Attack * 2; 
         }
         public override string Type()
         {

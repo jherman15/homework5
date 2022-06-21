@@ -9,13 +9,13 @@ namespace homework5
     abstract class DecoratorElvenHouse : ElvenHouse
     {
         protected ElvenHouse elvenHouse;
-        //-----------------setter - getter --------------------------
-        public override int Attack                                          // sposob 1
+
+        public override int Attack                                         
         {
             get { return ElvenHouse.Attack; }
             set { ElvenHouse.Attack = value; }
         }
-        public override int Health { get => base.Health; set => base.Health = value; }              //sposob 2
+        public override int Health { get => base.Health; set => base.Health = value; }        
 
 
         public ElvenHouse ElvenHouse
@@ -24,18 +24,12 @@ namespace homework5
             set { elvenHouse = value; }
         }
 
-        //public override int Attack { get; set; } = 0;                                             //sposb 3 - najprostszy
-
-        //-----------------END setter - getter --------------------------
-
-
-        //-----------------constructor --------------------------
+  
         public DecoratorElvenHouse(ElvenHouse _ElvenHouse)
         {
             ElvenHouse = _ElvenHouse;
         }
 
-        //----------------END constructor--------------------------
 
         public override int GetNextAttack()
         {

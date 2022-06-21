@@ -16,8 +16,16 @@ namespace homework5
         // ElvenHouse with extra wisdom - more magic damage
         public Noldor() : base()
         {
-            Attack += 50;
+            Attack += 10;
             Health += 1000;
+
+        }
+
+        //public int Craft = 50;
+
+        public override int Crafting()
+        {
+            return Craft;
 
         }
         public override string Type()

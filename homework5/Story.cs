@@ -25,6 +25,16 @@ namespace homework5
             "Your answer: ");
         }
 
+        public static void DecoratorsNoldor()
+        {
+            Console.WriteLine("Now you can choose which additional powers you want to give to the elves:\n " +
+            "a) Extra health \n " +
+            "b) Extra attack \n " +
+            "c) Extra might \n " +
+            "d) Extra crafting \n\n" +
+            "Your answer: ");
+        }
+
         public static void BeforeDecorating()
         {
             Console.WriteLine(

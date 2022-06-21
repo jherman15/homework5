@@ -12,6 +12,8 @@ namespace homework5
         public override int Health { get; set; } = 100;
         public override string Name { get; set; } = "Elves";
 
+        public int Craft = 50;
+
         public override int GetNextAttack()
         {
             return Attack;
@@ -43,6 +45,11 @@ namespace homework5
         }
 
 
+
+        public virtual int Crafting()
+        {
+            return Craft;
+        }
 
         public virtual int AttackChoice() // Produces heros decision
         {
