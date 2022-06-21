@@ -9,19 +9,12 @@ namespace homework5
     public class Noldor : ElvenHouse
     {
 
-        //public Noldor(string _name, int _attack, int _health) : base(_name, _attack, _health)         //mozna pozniej zrobic konstruktor
-        //{
-        //}
-
-        // ElvenHouse with extra wisdom - more magic damage
         public Noldor() : base()
         {
             Attack += 10;
             Health += 1000;
-
         }
 
-        //public int Craft = 50;
 
         public override int Crafting()
         {
@@ -34,29 +27,41 @@ namespace homework5
         }
 
 
-
         public void SpinAttack(Ainur target)
         {
             target.Health -= ((Attack - 2) * 3);
         }
 
-        public override void YourTurn(int decision, Ainur target)
+        public override void YourTurn(ElvenHouse house1, Ainur target)
         {
-            if (decision == 1)
-            {
-                DoubleSlash(target);
-                Console.WriteLine("You used double slash!");
-            }
+            int decision = 0;
 
-            if (decision == 2)
-            {
-                SpinAttack(target);
-                Console.WriteLine("You used spin attack!");
-            }
+
+                Console.WriteLine("What would you like to do?");
+                Console.WriteLine("1. Attack");
+                Console.WriteLine("2. Special attack");
+
+                bool test = int.TryParse(Console.ReadLine(), out decision);
+                if (!test || decision > 2 || decision <= 0)
+                {
+                    Console.WriteLine("That's not one of the options! Try again!");
+                    Console.ReadLine();
+                    Console.Clear();
+                    
+                }
+                else if (decision == 1)
+                {
+                    target.Health -= house1.GetNextAttack();
+                }
+                else if (decision == 2)
+                {
+                    SpinAttack(target);
+                    Console.WriteLine("You used a spin attack!");
+                }
 
         }
 
-       
+
 
 
     }

@@ -128,7 +128,7 @@ namespace homework5
 
                     case "c":
                         {
-                            x = new DecoratorArmor(x);
+                            x = new DecoratorExtraAttack(x);
                             x.PrintStats(x);
                             break;
                         }
@@ -149,17 +149,17 @@ namespace homework5
 
             void AreElvesDead(ElvenHouse elves, Ainur ainur)
             {
-                if (elves.Health <= 0|| ainur.Health <= 0)
+                if (elves.Health <= 0)
                 {
                     Console.Clear();
-                    Console.WriteLine("Looks like " + elves + " is defeated! The game is over.");
+                    Console.WriteLine("Looks like " + elves.GetType() + " is defeated! The game is over.");
                     Console.ReadLine();
                     Environment.Exit(0);
                 }
-                else
+                else if ( ainur.Health <= 0)
                 {
                     Console.Clear();
-                    Console.WriteLine("Looks like " + ainur + " is defeated! The game is over.");
+                    Console.WriteLine("Looks like " + ainur.GetType() + " is defeated! The game is over.");
                     Console.ReadLine();
                     Environment.Exit(0);
                 }
@@ -172,9 +172,9 @@ namespace homework5
             {
                 for (int i = 0; i < battleList.Count; i++)
                 {
-                    Console.WriteLine(battleList[i].Type() + " is attacking.\n");
+                    Console.WriteLine(battleList[i].Type() + " is attacking Morgoth.\n");
 
-                    battleList[i].YourTurn(battleList[i].AttackChoice(), morgoth);
+                    battleList[i].YourTurn(battleList[i], morgoth);
 
                     Console.WriteLine("Morgoth health after " + battleList[i].Type() + " attack: " + morgoth.Health + "\n");
 
@@ -183,24 +183,31 @@ namespace homework5
                         Console.WriteLine("Morgoth hates Noldor as they are trying to surpass him." +
                             "\n\nFIREEEEE BREAAAAAAAATHH!!! DIE NOLDORS!");
                         morgoth.FireBreath(battleList[i]);
-                        Console.WriteLine("Noldor health after Morgoth attack: " + battleList[i].Health);
+                        Console.WriteLine("Noldor health after Morgoth's FIRE BREATH attack: " + battleList[i].Health);
                     }
                     else
                     {
                         battleList[i].Health -= morgoth.GetNextAttack();
-                        Console.WriteLine(battleList[i].Type() + " health after Morgoth attack: " + battleList[i].Health + "\n");
+                        Console.WriteLine("Morgoth attacked " + battleList[i].Type() + " with basic attack. Health after Morgoth attack: " + battleList[i].Health + "\n");
                     }
 
                     
                     AreElvesDead(battleList[i], morgoth);
-                    treasury.CheckTreasury();
+                    treasury.CheckTreasury(battleList[i]);
+                    Console.WriteLine("Number of silmaril: " + treasury.NumberOfSilmaril);
+
                     if(treasury.NumberOfSilmaril>0)
                     {
-                        Console.WriteLine("Silmaril shifts the battle! ");
+                        Console.Clear();
+                        Console.WriteLine("Silmaril shifts the battle! This is the end.");
+                        Console.ReadLine();
+                        Environment.Exit(0);
+
                     }
 
                     //Console.WriteLine(battleList[i].Type() + " has been attacked with fire breath!\n" + "Elven health after Morgoth attack: " + battleList[i].Health);
                     Console.WriteLine("\n\nNow it's your turn again!");
+                    Console.WriteLine("\n\n\n----------------------- NEW TURN ------------------------------");
 
                 }
             }

@@ -45,18 +45,14 @@
   <ItemGroup>
     <Compile Include="Being.cs" />
     <Compile Include="DecoratorAinur.cs" />
-    <Compile Include="DecoratorFireBolt.cs" />
     <Compile Include="DecoratorCraft.cs" />
     <Compile Include="Story.cs" />
     <Compile Include="IBeing.cs" />
     <Compile Include="Morgoth.cs" />
     <Compile Include="Ainur.cs" />
-    <Compile Include="HouseCreationEngine.cs" />
     <Compile Include="DecoratorElvenHouse.cs" />
     <Compile Include="DecoratorSpell.cs" />
     <Compile Include="DecoratorArmor.cs" />
-    <Compile Include="DecoratorSpell2.cs" />
-    <Compile Include="DecoratorMachineLearning.cs" />
     <Compile Include="DecoratorExtraAttack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,10 +60,8 @@
     <Compile Include="ElvenHouse.cs" />
     <Compile Include="Treasury.cs" />
     <Compile Include="Vanyar.cs" />
-    <Compile Include="SpaceshipExtraCannon.cs" />
     <Compile Include="Noldor.cs" />
     <Compile Include="Teleri.cs" />
-    <Compile Include="DecoratorHealingAttack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

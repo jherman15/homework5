@@ -23,11 +23,6 @@ namespace homework5
             return "Ainur";
         }
 
-
-
-
-
-
     }
 }
 

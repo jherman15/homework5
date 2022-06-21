@@ -19,9 +19,9 @@ namespace homework5
         public static void Decorators()
         {
             Console.WriteLine("Now you can choose which additional powers you want to give to the elves:\n"+
-            "a) Extra health \n " +
-            "b) Extra attack \n " +
-            "c) Extra might \n\n" +
+            "a) Add health \n " +
+            "b) Add attack \n " +
+            "c) Extra attack \n\n" +
             "Your answer: ");
         }
 
@@ -30,7 +30,7 @@ namespace homework5
             Console.WriteLine("Now you can choose which additional powers you want to give to the elves:\n " +
             "a) Extra health \n " +
             "b) Extra attack \n " +
-            "c) Extra might \n " +
+            "c) Healing after attack \n " +
             "d) Extra crafting \n\n" +
             "Your answer: ");
         }

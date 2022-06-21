@@ -20,17 +20,17 @@ namespace homework5
             set { feanor = value; }
         }
 
-        public int CheckTreasury()          //jakiś argument?
+        public int CheckTreasury(ElvenHouse feanor1)          
         {
-            if (Feanor.Craft > 100)
-                return NumberOfSilmaril += 1;
+            if (feanor1.Craft > 100)
+            {
+                NumberOfSilmaril+=1;
+                return NumberOfSilmaril;
+            }
+
             else
                 return NumberOfSilmaril;
         }
-
-        //metoda get liczba bułek, jeśli chcę zaglądnąć
-        //jeśli to ma fabularne uzasadnienie, to ok
-        //nie mozna podlądnać wartości nie wchodząc w nią
 
     }
 }
